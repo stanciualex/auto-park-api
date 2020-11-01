@@ -48,36 +48,63 @@ nodemon server.js
 
 ### POST '/damages' - create a damage body:
   carId: string
+  
   userId: string
+  
   date: date
+  
   details: string
+  
   location: string
+  
   images: binary object
+  
   solveDate: date
+  
   solved: boolean
+  
   deleted: boolean
   
 ### POST '/cars' - create a damage body:
   id: string
+  
   vin: string
+  
   manufacturer: string
+  
   model: string
+  
   engine: string
+  
   color: string
+  
   image: binary object
+  
   licencePlate: string
+  
   fabricationDate: date
+  
   insuranceValability: date
+  
   itpValability: date
+  
   nextService: date
+  
   deleted: boolean
   
 ### POST '/rentals' - create a damage body:
   id: string
+  
   carId: string
+  
   userId: string
+  
   startDate: date
+  
   endDate: date
+  
   details: string
+  
   state: string
+  
   deleted: boolean
