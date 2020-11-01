@@ -2,7 +2,7 @@ const passwordHash = require('password-hash');
 
 const userRepo = require('../repositories/userRepo');
 const verifyPagination = require('../utils/verifyPagination');
-const handleError = require('../utils/handleError');
+const { handleError } = require('../utils/handleError');
 
 /*
  Get a single User

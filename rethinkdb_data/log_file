@@ -40,3 +40,26 @@
 2020-11-01T14:51:40.383739000 9.887715s notice: All client connections closed.
 2020-11-01T14:51:40.383746000 9.887721s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
 2020-11-01T14:51:40.386331000 9.890307s notice: Storage engine shut down.
+2020-11-01T17:26:31.703398000 0.064677s notice: Running rethinkdb 2.4.0 (CLANG 11.0.3 (clang-1103.0.32.62))...
+2020-11-01T17:26:31.710089000 0.071366s notice: Running on Darwin 19.6.0 x86_64
+2020-11-01T17:26:31.710152000 0.071438s notice: Loading data from directory /Users/andreimiron/auto-park-api/rethinkdb_data
+2020-11-01T17:26:31.733667000 0.094944s info: Automatically using cache size of 824 MB
+2020-11-01T17:26:31.736908000 0.098184s notice: Listening for intracluster connections on port 29015
+2020-11-01T17:26:31.748554000 0.109832s notice: Listening for client driver connections on port 28015
+2020-11-01T17:26:31.748677000 0.109954s notice: Listening for administrative HTTP connections on port 8080
+2020-11-01T17:26:31.748685000 0.109962s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2020-11-01T17:26:31.748689000 0.109966s notice: Listening on driver addresses: 127.0.0.1, ::1
+2020-11-01T17:26:31.748781000 0.110058s notice: Listening on http addresses: 127.0.0.1, ::1
+2020-11-01T17:26:31.748784000 0.110061s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2020-11-01T17:26:31.748795000 0.110072s notice: Server ready, "192_168_0_110_rdsnet_ro_x3t" 7c4b6a4e-8096-4248-9a2f-09d47d4ff97f
+2020-11-01T17:26:33.651433000 2.012770s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: Starting a new Raft election for term 3.
+2020-11-01T17:26:33.662107000 2.023444s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: This server is Raft leader for term 3. Latest log index is 6.
+2020-11-01T18:14:09.389677000 2307.104839s info: Table 3a936838-9a15-45d7-bca8-76925791c7d5: Starting a new Raft election for term 1.
+2020-11-01T18:14:09.390233000 2307.105395s info: Table 3a936838-9a15-45d7-bca8-76925791c7d5: Added replica on this server.
+2020-11-01T18:14:09.390249000 2307.105411s info: Table 0e85a714-d404-430b-8077-34b6728dd484: Starting a new Raft election for term 1.
+2020-11-01T18:14:09.390475000 2307.105637s info: Table 0e85a714-d404-430b-8077-34b6728dd484: Added replica on this server.
+2020-11-01T18:14:09.394279000 2307.109441s info: Table 9a9a98bf-2c52-403b-963a-b7cbae5ce79b: Starting a new Raft election for term 1.
+2020-11-01T18:14:09.394445000 2307.109607s info: Table 9a9a98bf-2c52-403b-963a-b7cbae5ce79b: Added replica on this server.
+2020-11-01T18:14:09.402595000 2307.117757s info: Table 3a936838-9a15-45d7-bca8-76925791c7d5: This server is Raft leader for term 1. Latest log index is 0.
+2020-11-01T18:14:09.410144000 2307.125306s info: Table 0e85a714-d404-430b-8077-34b6728dd484: This server is Raft leader for term 1. Latest log index is 0.
+2020-11-01T18:14:09.417467000 2307.132630s info: Table 9a9a98bf-2c52-403b-963a-b7cbae5ce79b: This server is Raft leader for term 1. Latest log index is 0.
