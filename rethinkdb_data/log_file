@@ -1,0 +1,42 @@
+2020-11-01T14:50:44.182276000 0.014502s notice: Recursively removing directory /Users/andreimiron/auto-park-api/rethinkdb_data/tmp
+2020-11-01T14:50:44.183962000 0.016191s notice: Initializing directory /Users/andreimiron/auto-park-api/rethinkdb_data
+2020-11-01T14:50:44.184047000 0.016273s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/andreimiron/auto-park-api/rethinkdb_data' did not already exist or is empty.)
+2020-11-01T14:50:44.184083000 0.016309s notice: Running rethinkdb 2.4.0 (CLANG 11.0.3 (clang-1103.0.32.62))...
+2020-11-01T14:50:44.191887000 0.024113s notice: Running on Darwin 19.6.0 x86_64
+2020-11-01T14:50:44.191971000 0.024197s notice: Loading data from directory /Users/andreimiron/auto-park-api/rethinkdb_data
+2020-11-01T14:50:44.252503000 0.084731s info: Automatically using cache size of 825 MB
+2020-11-01T14:50:44.253128000 0.085356s notice: Listening for intracluster connections on port 29015
+2020-11-01T14:50:44.254431000 0.086659s notice: Listening for client driver connections on port 28015
+2020-11-01T14:50:44.254484000 0.086712s notice: Listening for administrative HTTP connections on port 8080
+2020-11-01T14:50:44.254489000 0.086716s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2020-11-01T14:50:44.254492000 0.086719s notice: Listening on driver addresses: 127.0.0.1, ::1
+2020-11-01T14:50:44.254496000 0.086724s notice: Listening on http addresses: 127.0.0.1, ::1
+2020-11-01T14:50:44.254500000 0.086728s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2020-11-01T14:50:44.254504000 0.086732s notice: Server ready, "192_168_0_110_rdsnet_ro_x3t" 7c4b6a4e-8096-4248-9a2f-09d47d4ff97f
+2020-11-01T14:50:49.975537000 5.807945s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: Starting a new Raft election for term 1.
+2020-11-01T14:50:49.975961000 5.808370s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: Added replica on this server.
+2020-11-01T14:50:49.984922000 5.817331s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: This server is Raft leader for term 1. Latest log index is 0.
+2020-11-01T14:51:02.184458000 18.017251s notice: Server got SIGINT from pid 377, uid 501; shutting down...
+2020-11-01T14:51:02.184635000 18.017428s notice: Shutting down client connections...
+2020-11-01T14:51:02.184787000 18.017581s notice: All client connections closed.
+2020-11-01T14:51:02.184794000 18.017587s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2020-11-01T14:51:02.187670000 18.020463s notice: Storage engine shut down.
+2020-11-01T14:51:30.512305000 0.015973s notice: Running rethinkdb 2.4.0 (CLANG 11.0.3 (clang-1103.0.32.62))...
+2020-11-01T14:51:30.519744000 0.023409s notice: Running on Darwin 19.6.0 x86_64
+2020-11-01T14:51:30.519826000 0.023490s notice: Loading data from directory /Users/andreimiron/auto-park-api/rethinkdb_data
+2020-11-01T14:51:30.540183000 0.043849s info: Automatically using cache size of 895 MB
+2020-11-01T14:51:30.541105000 0.044770s notice: Listening for intracluster connections on port 29015
+2020-11-01T14:51:30.551890000 0.055556s notice: Listening for client driver connections on port 28015
+2020-11-01T14:51:30.551979000 0.055645s notice: Listening for administrative HTTP connections on port 8080
+2020-11-01T14:51:30.551982000 0.055647s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2020-11-01T14:51:30.552017000 0.055683s notice: Listening on driver addresses: 127.0.0.1, ::1
+2020-11-01T14:51:30.552107000 0.055772s notice: Listening on http addresses: 127.0.0.1, ::1
+2020-11-01T14:51:30.552109000 0.055775s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2020-11-01T14:51:30.552119000 0.055784s notice: Server ready, "192_168_0_110_rdsnet_ro_x3t" 7c4b6a4e-8096-4248-9a2f-09d47d4ff97f
+2020-11-01T14:51:31.946334000 1.450043s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: Starting a new Raft election for term 2.
+2020-11-01T14:51:31.956177000 1.459887s info: Table 58466908-7d4a-4dc1-bd04-6767dc7bf885: This server is Raft leader for term 2. Latest log index is 3.
+2020-11-01T14:51:40.383498000 9.887474s notice: Server got SIGINT from pid 377, uid 501; shutting down...
+2020-11-01T14:51:40.383641000 9.887616s notice: Shutting down client connections...
+2020-11-01T14:51:40.383739000 9.887715s notice: All client connections closed.
+2020-11-01T14:51:40.383746000 9.887721s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2020-11-01T14:51:40.386331000 9.890307s notice: Storage engine shut down.

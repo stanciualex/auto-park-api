@@ -1,0 +1,21 @@
+{
+  "name": "auto-park-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --use-strict server.js",
+    "start:dev": "nodemon -L --use-strict server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "password-hash": "^1.2.2",
+    "rethinkdb": "^2.4.2",
+    "thinky": "^2.3.9"
+  }
+}
