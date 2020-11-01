@@ -9,6 +9,7 @@ const User = thinky.createModel("User", {
   email: type.string().required(),
   password: type.string().required(),
   description: type.string(),
+  picture: type.string(), // modify to blob
   jobTitle: type.string(),
   role: type.string().required(),
   createdAt: type.date().default(r.now()),
