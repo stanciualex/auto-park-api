@@ -27,14 +27,23 @@ nodemon server.js
 
 ### POST '/users' - create a user body:
   firstName: string
+  
   lastName: string
+  
   email: string
+  
   password: string
+  
   description: string
+  
   picture: binary object
+  
   jobTitle: string
+  
   role: string
+  
   createdAt: date
+  
   deleted: boolean
 
 ### POST '/damages' - create a damage body:
