@@ -15,4 +15,7 @@ router.route('/:id')
 router.route('/login')
   .post(userCtrl.login);
 
+router.route('/invite')
+    .post(userCtrl.invite);
+
 module.exports = router;

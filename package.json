@@ -14,6 +14,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "generate-password": "^1.5.1",
     "password-hash": "^1.2.2",
     "rethinkdb": "^2.4.2",
     "thinky": "^2.3.9"

@@ -1,8 +1,16 @@
 const passwordHash = require('password-hash');
+const passwordGenerator = require('generate-password');
 
 const userRepo = require('../repositories/userRepo');
 const verifyPagination = require('../utils/verifyPagination');
 const { handleError } = require('../utils/handleError');
+
+const generatePassword = () => {
+    return passwordGenerator.generate({
+       length: 16,
+       numbers: true,
+    });
+};
 
 /*
  Get a single User
@@ -74,7 +82,10 @@ module.exports.getById = (req, res) => {
  Creates a User resource. Returns a User object
  */
 module.exports.create = (req, res) => {
-  userRepo.create(req.body)
+  userRepo.create({
+      ...req.body,
+      password: passwordHash.generate(req.body.password)
+  })
     .then((user) => {
       res.json(user);
     })
@@ -103,4 +114,26 @@ module.exports.delete = (req, res) => {
       res.json(user)
     })
     .catch(handleError(res));
+};
+
+/*
+    Creates a user with provided and email & role and a generated password
+    Returns the User object
+ */
+module.exports.invite = (req, res) => {
+    const { email, role } = req.body;
+    const generatedPassword = generatePassword();
+    const hashedPassword = passwordHash.generate(generatedPassword);
+
+    console.log(`New invited user { email: ${email}, password: ${generatedPassword} }`);
+
+    userRepo.create({
+        email,
+        password: hashedPassword,
+        role,
+    })
+        .then((user) => {
+            res.json(user);
+        })
+        .catch(handleError(res));
 };
