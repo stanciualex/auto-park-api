@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node --use-strict server.js",
-    "start:dev": "nodemon -L --use-strict server.js"
+    "start:dev": "nodemon -L --use-strict server.js",
+    "populate-db": "node populateTables.js"
   },
   "author": "",
   "license": "ISC",

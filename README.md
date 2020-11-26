@@ -23,6 +23,11 @@ Step 4. Start node server (default port is 8000
 nodemon server.js
 ```
 
+Step 5. Populate the database 
+```
+npm run populate-db
+```
+
 ## Learn More 
 
 
