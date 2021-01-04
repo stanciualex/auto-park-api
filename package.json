@@ -19,5 +19,8 @@
     "password-hash": "^1.2.2",
     "rethinkdb": "^2.4.2",
     "thinky": "^2.3.9"
+  },
+  "devDependencies": {
+    "multer": "^1.4.2"
   }
 }
