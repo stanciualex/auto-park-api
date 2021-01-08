@@ -1,5 +1,6 @@
 const passwordHash = require('password-hash');
 const passwordGenerator = require('generate-password');
+const nodemailer = require('nodemailer');
 
 const userRepo = require('../repositories/userRepo');
 const verifyPagination = require('../utils/verifyPagination');
@@ -117,12 +118,57 @@ module.exports.delete = (req, res) => {
 };
 
 /*
+    Send the email to the user
+ */
+
+const sendEmail = async (email, password, res) => {
+  const content = `
+    <div>
+        <h1>Welcome to our team!</h1>
+        <h3>This are the data for your account:</h3>
+        <h5>Email: <bold>${email}</bold></h5>
+        <h5>Password: <bold>${password}</bold></h5>
+    </div>
+  `;
+
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'autopark992@gmail.com',
+      pass: 'EchipaCuReactie2021',
+    },
+  });
+
+  try {
+    await transporter.sendMail({
+      from: '"Auto Park" <autopark@gmail.com>',
+      to: email,
+      replyTo: 'autopark@gmail.com',
+      subject: 'AUTO PARK - New Account',
+      text: 'Your account details are:',
+      html: content,
+    });
+  } catch (e) {
+    res.send({
+      success: false,
+    });
+    return;
+  }
+  res.send({
+    success: true,
+  });
+}
+
+/*
     Creates a user with provided and email & role and a generated password
     Returns the User object
  */
-module.exports.invite = (req, res) => {
+module.exports.invite = async (req, res) => {
     const { email, role } = req.body;
     const generatedPassword = generatePassword();
+    await sendEmail(email, generatedPassword, res);
     const hashedPassword = passwordHash.generate(generatedPassword);
 
     console.log(`New invited user { email: ${email}, password: ${generatedPassword} }`);
