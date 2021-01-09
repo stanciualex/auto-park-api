@@ -1,3 +1,5 @@
+import * as passwordHash from "password-hash";
+
 const carRepo = require('./src/repositories/carRepo');
 const userRepo = require('./src/repositories/userRepo');
 
@@ -98,15 +100,17 @@ const populateCars = () => {
 };
 
 const populateUsers = () => {
+    const hashedPassword = passwordHash.generate('asdf1234A');
+
     userRepo.create({
         email: 'admin@admin.com',
-        password: 'asdf1234A',
+        password: hashedPassword,
         role: 'admin',
     });
 
     userRepo.create({
         email: 'user@user.com',
-        password: 'asdf1234A',
+        password: hashedPassword,
         role: 'user',
     });
 };
