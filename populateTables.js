@@ -1,4 +1,4 @@
-import * as passwordHash from "password-hash";
+const passwordHash = require('password-hash');
 
 const carRepo = require('./src/repositories/carRepo');
 const userRepo = require('./src/repositories/userRepo');
