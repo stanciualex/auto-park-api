@@ -1,4 +1,5 @@
 const carRepo = require('./src/repositories/carRepo');
+const userRepo = require('./src/repositories/userRepo');
 
 const generateDate = (startYear, endYear) => {
     const startDate = new Date(null);
@@ -96,9 +97,24 @@ const populateCars = () => {
     console.log('[CARS] Done creating cars...');
 };
 
+const populateUsers = () => {
+    userRepo.create({
+        email: 'admin@admin.com',
+        password: 'asdf1234A',
+        role: 'admin',
+    });
+
+    userRepo.create({
+        email: 'user@user.com',
+        password: 'asdf1234A',
+        role: 'user',
+    });
+};
+
 const populateTables = () => {
     console.log('Start creating default data...');
     populateCars();
+    populateUsers();
     console.log('Done creating default data...');
     console.log('Press CTRL + C to exit');
 };
