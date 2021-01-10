@@ -11,7 +11,7 @@ const generateDate = (startYear, endYear) => {
     const start = startDate.getTime();
     const end = endDate.getTime();
 
-    return start + Math.random() * (end - start);
+    return start + Math.random() * (end - start)
 };
 
 const generateVIN = () => {

@@ -5,7 +5,7 @@
  If not, normalizes them.
  */
 module.exports = (limit, page, count) => {
-  limit = (limit > 0) ? parseInt(limit) : 15;
+  limit = (limit > 0) ? parseInt(limit) : 1000;
   page = (page > 0) ? parseInt(page) : 1;
 
   // If the provided page is greater than the last page, return results from the last page
