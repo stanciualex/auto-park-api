@@ -47,42 +47,80 @@ const generateLicencePlate = () => {
     return `CJ ${num < 10 ? `0${num}` : num} ${lettersCombination}`;
 };
 
+const getRandomArrayItem = (array) => {
+    const index = Math.floor(Math.random() * array.length);
+    return array[index];
+};
+
 const populateCars = () => {
     console.log('[CARS] Start creating cars...');
     const cars = [{
         manufacturer: 'Audi',
         models: ['A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q3', 'Q5', 'Q7', 'Q8', 'TT', 'R8'],
+        images: [
+            'https://s1.cdn.autoevolution.com/images/gallery/AUDI-A3-Sportback-6768_19.jpg',
+            'https://www.carpixel.net/w/771a702767e9be8cb619f348713af621/audi-a8-l-car-wallpaper-80861.jpg',
+            'https://images3.alphacoders.com/934/934978.jpg',
+        ],
     }, {
         manufacturer: 'BMW',
-        models: ['3 Series', '5 Series', '7 Series', 'X3', 'X5', 'X6', 'X7']
+        models: ['3 Series', '5 Series', '7 Series', 'X3', 'X5', 'X6', 'X7'],
+        images: [
+            'https://images.unsplash.com/flagged/photo-1553505192-acca7d4509be?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2267&q=80',
+            'https://www.hdcarwallpapers.com/walls/bmw_m5_f90-HD.jpg',
+        ],
     }, {
         manufacturer: 'Mercedes-Benz',
         models: ['C Class', 'E Class', 'Sprinter'],
+        images: [
+            'https://images5.alphacoders.com/709/709200.jpg',
+            'https://images8.alphacoders.com/809/809644.jpg',
+        ],
     }, {
         manufacturer: 'Dacia',
         models: ['Logan', 'Sandero', 'Duster'],
+        images: [
+            'https://images3.alphacoders.com/272/272927.jpg',
+            'https://images4.alphacoders.com/226/226364.jpg',
+        ],
     }, {
         manufacturer: 'Ford',
         models: ['Focus', 'Fiesta', 'Mondeo', 'Transit'],
+        images: [
+            'https://images6.alphacoders.com/936/936259.jpg',
+            'https://images8.alphacoders.com/461/461457.jpg',
+        ],
     }, {
         manufacturer: 'Opel',
-        models: ['Astra', 'Insignia', 'Corsa']
+        models: ['Astra', 'Insignia', 'Corsa'],
+        images: [
+            'https://images7.alphacoders.com/794/794275.jpg',
+            'https://images3.alphacoders.com/110/1101292.jpg',
+        ],
     }, {
         manufacturer: 'Renault',
-        models: ['Megane', 'Talisman']
+        models: ['Megane', 'Talisman'],
+        images: [
+            'https://images8.alphacoders.com/776/776598.jpg'
+        ],
     }, {
         manufacturer: 'Volkswagen',
         models: ['Golf', 'Polo', 'Passat', 'Transporter'],
+        images: [
+            'https://images.alphacoders.com/765/765783.jpg',
+            'https://images5.alphacoders.com/104/1049344.jpg',
+        ],
     }];
 
     cars.forEach((item) => {
-        const { manufacturer, models } = item;
+        const { manufacturer, models, images } = item;
 
         models.forEach((model) => {
             const inputData = {
                 vin: generateVIN(),
                 manufacturer,
                 model,
+                image: getRandomArrayItem(images),
                 engine: generateEngine(),
                 color: generateColor(),
                 licencePlate: generateLicencePlate(),
