@@ -59,7 +59,7 @@ const populateCars = () => {
         models: ['A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q3', 'Q5', 'Q7', 'Q8', 'TT', 'R8'],
         images: [
             'https://s1.cdn.autoevolution.com/images/gallery/AUDI-A3-Sportback-6768_19.jpg',
-            'https://www.carpixel.net/w/771a702767e9be8cb619f348713af621/audi-a8-l-car-wallpaper-80861.jpg',
+            'https://media.ed.edmunds-media.com/audi/a7/2020/oem/2020_audi_a7_sedan_prestige-55-tfsi-quattro_fq_oem_1_1600.jpg',
             'https://images3.alphacoders.com/934/934978.jpg',
         ],
     }, {
