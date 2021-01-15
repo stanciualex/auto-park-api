@@ -98,7 +98,10 @@ module.exports.create = (req, res) => {
  Returns a User object
  */
 module.exports.update = (req, res) => {
-  userRepo.update(req.params.id, req.body)
+  userRepo.update(req.params.id, {
+      ...req.body,
+      password: passwordHash.generate(req.body.password),
+  })
     .then((user) => {
       res.json(user);
     })
