@@ -1,6 +1,8 @@
 const rentalRepo = require('../repositories/rentalRepo');
 const verifyPagination = require('../utils/verifyPagination');
 const { handleError } = require('../utils/handleError');
+const userRepo = require('../repositories/userRepo');
+const carRepo = require('../repositories/carRepo');
 
 /*
  Get all rentals
@@ -17,8 +19,16 @@ module.exports.getAll = (req, res, next) => {
 
         // Fetch all the data now, with the page and limit assured to be in range
         rentalRepo.getAll(limit, page, req.query)
-          .then((rentals) => {
-            req.data = rentals;
+          .then(async (rentals) => {
+              const rentalsDetailed = await Promise.all(rentals.map(async (rental) => {
+                  const user = await userRepo.getById(rental.userId);
+                  const car = await carRepo.getById(rental.carId);
+
+                  rental.user = user;
+                  rental.car = car;
+                  return rental;
+              }));
+            req.data = rentalsDetailed;
             req.meta = {
               page,
               limit,
