@@ -92,3 +92,15 @@ module.exports.delete = (req, res) => {
     })
     .catch(handleError(res));
 };
+
+/*
+ Get rentals by carId
+ Returns a list of Rental objects.
+ */
+module.exports.getByCarId = (req, res) => {
+    rentalRepo.getByCarId(req.params.carId)
+        .then((rental) => {
+            res.json(rental);
+        })
+        .catch(handleError(res));
+};

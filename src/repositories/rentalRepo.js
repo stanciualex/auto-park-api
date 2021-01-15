@@ -87,3 +87,16 @@ module.exports.count = () => {
     .count()
     .execute();
 };
+
+/*
+ Get rentals by carId
+ Returns a list of Rental objects.
+ */
+module.exports.getByCarId = (carId) => {
+    return Rental
+        .filter(
+            r.row("carId").eq(carId).and(r.row('state').eq('requested').or(r.row('state').eq('approved')))
+        )
+        .default([])
+        .run();
+};

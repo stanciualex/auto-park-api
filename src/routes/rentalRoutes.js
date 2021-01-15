@@ -12,4 +12,7 @@ router.route('/:id')
   .put(rentalCtrl.update)
   .delete(rentalCtrl.delete);
 
+router.route('/carId/:carId')
+    .get(rentalCtrl.getByCarId);
+
 module.exports = router;
