@@ -14,5 +14,7 @@ router.route('/:id')
 
 router.route('/carId/:carId')
     .get(rentalCtrl.getByCarId);
+router.route('/userId/:userId')
+    .get(rentalCtrl.getByUserId);
 
 module.exports = router;

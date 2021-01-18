@@ -104,3 +104,19 @@ module.exports.getByCarId = (req, res) => {
         })
         .catch(handleError(res));
 };
+
+module.exports.getByUserId = (req, res) => {
+    rentalRepo.getByUserId(req.params.userId)
+        .then(async (rentals) => {
+            const rentalsDetailed = await Promise.all(rentals.map(async (rental) => {
+                const user = await userRepo.getById(rental.userId);
+                const car = await carRepo.getById(rental.carId);
+
+                rental.user = user;
+                rental.car = car;
+                return rental;
+            }));
+            res.json(rentalsDetailed);
+        })
+        .catch(handleError(res));
+};

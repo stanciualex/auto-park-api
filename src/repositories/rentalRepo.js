@@ -100,3 +100,16 @@ module.exports.getByCarId = (carId) => {
         .default([])
         .run();
 };
+
+/*
+ Get rentals by carId
+ Returns a list of Rental objects.
+ */
+module.exports.getByUserId = (carId) => {
+    return Rental
+        .filter(
+            r.row("userId").eq(carId)
+        )
+        .default([])
+        .run();
+};
